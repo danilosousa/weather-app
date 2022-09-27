@@ -1,7 +1,29 @@
 <template>
   <div class="home">
-    <div class="weather-box">weather {{ loadWeather }}</div>
-    <div class="weather-box">city {{ cityName }}</div>
+    <div class="container">
+      <div class="col-left">
+        <div class="weather-box">city {{ cityName }}</div>
+        <div class="weather">
+          <div class="wheather-icon"></div>
+          <div class="wheather-temp">
+            <h2>10</h2>
+            <span>º</span>
+          </div>
+          <div class="wheather-sensacao">
+            sensação de ...
+          </div>
+          <div class="wheather-description">
+            chuva moderada
+          </div>
+          <div class="wheather-day">segunda-feira,</div>
+
+          <div class="wheather-city">Osasco</div>
+        </div>
+      </div>
+      <div class="col-right">
+        <div class="weather-box">weather {{ loadWeather }}</div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -31,3 +53,18 @@ export default {
   }
 };
 </script>
+<style lang="scss" scoped>
+.container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+.col-left {
+  width: 25%;
+}
+.col-right {
+  width: 75%;
+}
+</style>
